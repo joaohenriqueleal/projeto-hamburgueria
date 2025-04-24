@@ -2,7 +2,194 @@
 
 
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    background-image: url('../assets/images/bg.png');
+
+    height: 270px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+}
+
+header img.logo {
+    border-radius: 50%;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+
+    width: 100px;
+
+    transition: .3s;
+}
+
+header img.logo:hover {
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.33);
+
+    transform: scale(1.02) translateY(-2px);
+}
+
+header h1 {
+    margin: 20px;
+}
+
+header h3.endereco {
+    margin-bottom: 15px;
+}
+
+header h3.horario {
+    background-color: rgb(0, 181, 0);
+    border-radius: 10px;
+
+    padding: 5px;
+}
+
+main {
+    padding-bottom: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main h1 {
+    margin: 30px;
+
+    text-align: center;
+}
+
+main section.cardapio {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main section.cardapio div.item-cardapio {
+    margin: 20px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main section div.infos {
+    padding: 10px;
+}
+
+main section div.infos h3 {
+    font-size: 25px;
+}
+
+main section div.actions {
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.preco {
+    height: 35px;
+
+    font-weight: bolder;
+    font-size: 1.4em;
+
+    transition: .3s;
+}
+
+.preco:hover {
+    background-color: red;
+    border-radius: 10px;
+
+    padding: 3px;
+
+    color: white;
+}
+
+button {
+    background-color: black;
+    border-radius: 7px;
+    border: 2px solid rgb(49, 49, 49);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.28);
+
+    width: 105px;
+    height: 40px;
+    margin-top: 5px;
+
+    color: white;
+    font-size: 20px;
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background-color: rgb(40, 40, 40);
+}
+
+main section.cardapio img {
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+
+    width: 120px;
+}
+
+main section.bebidas {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main section.bebidas img {
+    height: 200px;
+    width: 200px;
+}
+
+main section.bebidas .preco {
+    text-align: center;
+}
+
+main section.bebidas div.bebida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-color: red;
+
+    width: 100%;
+    padding: 20px;
+
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: bolder;
+    color: white;
+
+    transition: .3s;
+    cursor: pointer;
+
+    z-index: 9;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+footer:hover {
+    background-color: rgb(255, 53, 53);
 }
