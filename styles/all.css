@@ -171,26 +171,43 @@ main section.bebidas div.bebida {
     justify-content: center;
 }
 
-footer {
+button.ver_carrinho {
     background-color: red;
+    border: none;
+    border-radius: 0px;
 
     width: 100%;
-    padding: 20px;
+    padding: 30px;
+    padding-bottom: 50px;
 
-    text-align: center;
-    font-size: 1.4em;
-    font-weight: bolder;
-    color: white;
-
-    transition: .3s;
-    cursor: pointer;
-
-    z-index: 9;
     position: fixed;
     bottom: 0;
     left: 0;
 }
 
-footer:hover {
-    background-color: rgb(255, 53, 53);
+button.ver_carrinho:hover {
+    background-color: rgb(255, 45, 45);
+}
+
+div.carrinho {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-200%, -50%);
+    width: 400px;
+    height: 550px;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+div.carrinho.aberto {
+    transform: translate(-50%, -50%);
+}
+
+.item-carrinho {
+    padding: 15px;
 }
