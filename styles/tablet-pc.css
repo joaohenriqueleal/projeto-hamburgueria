@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+
+@media screen and (min-width: 1050px) {
+    main section.cardapio {
+        max-width: 1200px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    div.carrinho {
+        width: 800px;
+        height: 700px;
+    }
+}

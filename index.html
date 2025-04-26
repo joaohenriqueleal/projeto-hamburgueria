@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hambúrqueria Monstro</title>
     <link rel="stylesheet" href="styles/all.css" media="all">
+    <link rel="stylesheet" href="styles/tablet-pc.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
@@ -60,10 +61,36 @@
                 <img src="assets/images/hamb-5.png" alt="hamburquer-cardapio">
                 <div class="infos">
                     <h3 class="nome-hamburguer">X-completão</h3>
-                    <p class="descricao">Um hambúrguer tradicionalíssimo da casa !</p>
+                    <p class="descricao">Um hambúrguer tradicionalíssimo da casa!</p>
                     <div class="actions">
                         <p class="preco">R$ 39.90</p>
                         <button class="adicionar-carrinho x-completao">
+                            <i class="bi bi-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item-cardapio">
+                <img src="assets/images/hamb-6.png" alt="hamburquer-cardapio">
+                <div class="infos">
+                    <h3 class="nome-hamburguer">X-Burguer</h3>
+                    <p class="descricao">Um hambúrguer feito apenas de carne boa!</p>
+                    <div class="actions">
+                        <p class="preco">R$ 22.40</p>
+                        <button class="adicionar-carrinho x-burguer">
+                            <i class="bi bi-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item-cardapio">
+                <img src="assets/images/hamb-7.png" alt="hamburquer-cardapio">
+                <div class="infos">
+                    <h3 class="nome-hamburguer">X-Pesadão</h3>
+                    <p class="descricao">Um hambúrguer feito para quem não quer emagrecer!</p>
+                    <div class="actions">
+                        <p class="preco">R$ 34.90</p>
+                        <button class="adicionar-carrinho x-pesadao">
                             <i class="bi bi-cart-plus"></i>
                         </button>
                     </div>
@@ -86,16 +113,24 @@
                     <i class="bi bi-cart-plus"></i>
                 </button>
             </div>
+            <div class="bebida">
+                <img src="assets/images/refri-3.jpeg" alt="Fanta">
+                <p class="preco">R$ 4.90</p>
+                <button class="adicionar-carrinho fanta">
+                    <i class="bi bi-cart-plus"></i>
+                </button>
+            </div>
         </section>
     </main>
     <button class="ver_carrinho">
         <span class="mostrador">( 0 )</span> Veja seu carrinho <i class="bi bi-cart-plus"></i>
     </button>
     <div class="carrinho">
-        <div class="itens"> <!-- Itens colocados por JS --></div>
-        <button class="finalizar-pedido">
-            Finalizar pedido
-        </button>
+            <div class="itens"> <!-- Itens colocados por JS --></div>
+            <button class="finalizar-pedido">
+                Finalizar pedido
+            </button>
+        </div>
     </div>
     <script src="scripts/scripts.js"></script>
 </body>

@@ -7,8 +7,13 @@ const btn_shedar = document.querySelector('.x-shedar')
 const btn_tudo = document.querySelector('.x-tudo')
 const btn_salada = document.querySelector('.x-salada')
 const btn_completao = document.querySelector('.x-completao')
+const btn_burguer = document.querySelector('.x-burguer')
+const btn_pesadao = document.querySelector('.x-pesadao')
+
+// refris
 const btn_coca = document.querySelector('.coca')
 const btn_guarana = document.querySelector('.guarana')
+const btn_fanta = document.querySelector('.fanta')
 
 function add_element_to_cart(name, preco, quantidade) {
     const itens = carrinho.querySelectorAll('.item-carrinho')
@@ -42,6 +47,7 @@ btn_finalizar_pedido.addEventListener("click", (event) => {
     const items = carrinho.querySelectorAll('.item-carrinho')
     items.forEach(item => item.remove())
     alert('Pedido finalizado com sucesso!')
+    carrinho.classList.remove('aberto')
 })
 
 btn_ver_carrinho.addEventListener("click", (event) => {
@@ -70,10 +76,22 @@ btn_completao.addEventListener("click", (event) => {
     add_element_to_cart('X-completão', 39.90, 1)
 })
 
+btn_burguer.addEventListener("click", (event) => {
+    add_element_to_cart('X-burguer', 22.40, 1)
+})
+
+btn_pesadao.addEventListener("click", (event) => {
+    add_element_to_cart('X-pesadão', 34.90, 1)
+})
+
 btn_coca.addEventListener("click", (event) => {
     add_element_to_cart('Coca-cola', 5.90, 1)
 })
 
 btn_guarana.addEventListener("click", (event) => {
     add_element_to_cart('Guaraná', 4.90, 1)
+})
+
+btn_fanta.addEventListener("click", (event) => {
+    add_element_to_cart('Fanta laranja', 4.90, 1)
 })

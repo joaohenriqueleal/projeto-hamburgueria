@@ -112,6 +112,10 @@ main section div.actions {
     transition: .3s;
 }
 
+.descricao {
+    max-width: 300px;
+}
+
 .preco:hover {
     background-color: red;
     border-radius: 10px;
@@ -151,6 +155,8 @@ main section.cardapio img {
 
 main section.bebidas {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
 }
@@ -196,7 +202,7 @@ div.carrinho {
     transform: translate(-1000%, -50%);
     width: 380px;
     height: 570px;
-    transition: transform .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: transform .4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     z-index: 10;
     border-radius: 10px;
     background-color: white;
@@ -204,6 +210,7 @@ div.carrinho {
     overflow: hidden;
     display: flex;
     flex-direction: column-reverse;
+    overflow-y: auto;
 }
 
 div.carrinho.aberto {
