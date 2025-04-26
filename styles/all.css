@@ -252,3 +252,8 @@ div.campo-item {
     font-weight: bold;
     font-size: 1.2em;
 }
+
+.total {
+    padding: 10px;
+    border-top: 2px solid rgb(170, 170, 170);
+}

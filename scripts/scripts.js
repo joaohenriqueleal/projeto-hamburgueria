@@ -1,6 +1,8 @@
 const carrinho = document.querySelector('.carrinho')
 const btn_ver_carrinho = document.querySelector('.ver_carrinho')
 const btn_finalizar_pedido = document.querySelector('.finalizar-pedido')
+const mostrador = document.querySelector('.mostrador')
+const total_carrinho = document.querySelector('.total')
 
 // buttons adicionar ao carrinho.
 const btn_shedar = document.querySelector('.x-shedar')
@@ -14,6 +16,34 @@ const btn_pesadao = document.querySelector('.x-pesadao')
 const btn_coca = document.querySelector('.coca')
 const btn_guarana = document.querySelector('.guarana')
 const btn_fanta = document.querySelector('.fanta')
+
+function atualizar_mostrador() {
+    let cont = 0
+    const itens = carrinho.querySelectorAll('.item-carrinho')
+    itens.forEach(item => {
+        const quantidadeTexto = item.querySelector('.quantidade').textContent
+        const quantidade = parseInt(quantidadeTexto.replace('quantidade: ', ''))
+        cont += parseInt(quantidade)
+    })
+    mostrador.innerHTML = '( ' + cont + ' )'
+}
+
+function calcular_total_carrinho() {
+    const itens = carrinho.querySelectorAll('.item-carrinho')
+    let total = 0
+
+    itens.forEach(item => {
+        const precoTexto = item.querySelector('.campo-item').childNodes[0].textContent.trim()
+        const preco = parseFloat(precoTexto.replace('R$', '').replace(',', '.'))
+
+        const quantidadeTexto = item.querySelector('.quantidade').textContent
+        const quantidade = parseInt(quantidadeTexto.replace('quantidade: ', ''))
+
+        total += preco * quantidade
+    })
+    total_carrinho.innerHTML = `Total: R$ ${total.toFixed(2)}`
+}
+
 
 function add_element_to_cart(name, preco, quantidade) {
     const itens = carrinho.querySelectorAll('.item-carrinho')
@@ -40,6 +70,8 @@ function add_element_to_cart(name, preco, quantidade) {
         carrinho.appendChild(new_element)
     }
     alert(`${name} adicionado ao carrinho com sucesso!`)
+    atualizar_mostrador()
+    calcular_total_carrinho()
 }
 
 
@@ -48,6 +80,8 @@ btn_finalizar_pedido.addEventListener("click", (event) => {
     items.forEach(item => item.remove())
     alert('Pedido finalizado com sucesso!')
     carrinho.classList.remove('aberto')
+    mostrador.innerHTML = '( ' + 0 + ' )'
+    total_carrinho.innerHTML = 'Total: R$ 0,00'
 })
 
 btn_ver_carrinho.addEventListener("click", (event) => {
