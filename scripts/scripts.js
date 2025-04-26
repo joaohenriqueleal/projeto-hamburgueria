@@ -34,15 +34,15 @@ function add_element_to_cart(name, preco, quantidade) {
         new_element.classList.add('item-carrinho')
         carrinho.appendChild(new_element)
     }
-    alert('Item adicionado ao carrinho!')
+    alert(`${name} adicionado ao carrinho com sucesso!`)
 }
 
 
 btn_finalizar_pedido.addEventListener("click", (event) => {
     const items = carrinho.querySelectorAll('.item-carrinho')
     items.forEach(item => item.remove())
+    alert('Pedido finalizado com sucesso!')
 })
-
 
 btn_ver_carrinho.addEventListener("click", (event) => {
     carrinho.classList.toggle('aberto')
